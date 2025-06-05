@@ -1,0 +1,22 @@
+
+> greenhouse-ecommerce@0.1.0 dev
+> next dev
+
+ ⚠ Port 3000 is in use, using available port 3002 instead.
+   ▲ Next.js 15.3.3
+   - Local:        http://localhost:3002
+   - Network:      http://192.168.1.66:3002
+   - Environments: .env
+   - Experiments (use with caution):
+     ✓ optimizeCss
+
+ ✓ Starting...
+ ✓ Ready in 1957ms
+ ○ Compiling /api/cart ...
+ ✓ Compiled /api/cart in 2.7s (378 modules)
+ GET /api/cart?sessionId=default 200 in 3079ms
+ DELETE /api/cart 200 in 12ms
+ PUT /api/cart 200 in 13ms
+ PUT /api/cart 404 in 15ms
+ ✓ Compiled in 271ms (279 modules)
+[?25h

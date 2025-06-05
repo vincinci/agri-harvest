@@ -1,0 +1,7 @@
+DATABASE_URL="postgresql://agri-harvest_owner:npg_n1kQGX4FlSrW@ep-nameless-shape-a80fwbj1-pooler.eastus2.azure.neon.tech/agri-harvest?sslmode=require&connection_limit=5&pool_timeout=5"
+FLUTTERWAVE_PUBLIC_KEY="FLWPUBK-80beae9a1e1463654d41a8e4d00515dd-X"
+FLUTTERWAVE_SECRET_KEY="FLWSECK-cc842f4c47bf0059d3854bf053c11296-1973d2d141dvt-X"
+FLUTTERWAVE_ENCRYPTION_KEY="cc842f4c47bf3f882628801e"
+FLUTTERWAVE_WEBHOOK_SECRET="greenhouse-webhook-secret-2024"
+NEXTAUTH_URL="http://localhost:3000"
+NEXT_PUBLIC_BASE_URL="http://localhost:3000"
