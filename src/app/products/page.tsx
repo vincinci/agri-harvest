@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { Filter, Star, Heart, Search } from 'lucide-react'
 import { useSearchParams } from 'next/navigation'
 import Navigation from '../components/Navigation'
@@ -22,7 +22,7 @@ const staggerContainer = {
   }
 }
 
-export default function ProductsPage() {
+function ProductsPageContent() {
   const searchParams = useSearchParams()
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [searchQuery, setSearchQuery] = useState('')
@@ -62,7 +62,7 @@ export default function ProductsPage() {
         setSearchQuery(mappedCategory) // Use as search query
       }
     }
-  }, [searchParams])
+  }, [searchParams, categoryMapping])
 
   // Fetch products from API
   useEffect(() => {
@@ -557,5 +557,22 @@ export default function ProductsPage() {
         onAddToCart={handleSearchPopupAddToCart}
       />
     </div>
+  )
+}
+
+export default function ProductsPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-white">
+        <div className="pt-24 pb-12 bg-black">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-5xl font-bold text-white mb-4">Our Fresh Products</h1>
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white mx-auto"></div>
+          </div>
+        </div>
+      </div>
+    }>
+      <ProductsPageContent />
+    </Suspense>
   )
 } 
